@@ -1,12 +1,15 @@
-```diff
-- This is a BETA release
-```
+# NDQ: Learning Nearly Decomposable Value Functions with Communication Minimization
 
-# Python MARL framework
+## Note
+ This codebase accompanies paper [Learning Nearly Decomposable Value Functions with Communication Minimization](https://openreview.net/forum?id=HJx-3grYDB&noteId=HJx-3grYDB), 
+ and is based on  [PyMARL](https://github.com/oxwhirl/pymarl) and [SMAC](https://github.com/oxwhirl/smac) codebases which are open-sourced.
 
-CommIB is written in PyTorch and uses [SMAC](https://github.com/oxwhirl/smac) as its environment.
+The implementation of the following methods can also be found in this codebase, which are finished by the authors of [PyMARL](https://github.com/oxwhirl/pymarl):
 
-## Installation instructions
+- [**QMIX**: QMIX: Monotonic Value Function Factorisation for Deep Multi-Agent Reinforcement Learning](https://arxiv.org/abs/1803.11485)
+- [**COMA**: Counterfactual Multi-Agent Policy Gradients](https://arxiv.org/abs/1705.08926)
+- [**VDN**: Value-Decomposition Networks For Cooperative Multi-Agent Learning](https://arxiv.org/abs/1706.05296) 
+- [**IQL**: Independent Q-Learning](https://arxiv.org/abs/1511.08779)
 
 Build the Dockerfile using 
 ```shell
@@ -25,6 +28,8 @@ The requirements.txt file can be used to install the necessary packages into a v
 
 ## Run an experiment 
 
+The following command train NDQ on the didactic task `hallway`.
+
 ```shell
 python3 src/main.py 
 --config=categorical_qmix
@@ -39,7 +44,7 @@ comm_beta=1e-2
 comm_entropy_beta=0.
 batch_size_run=16
 t_max=2e7
-local_results_path='../../tmp/commIB_v2/results/'
+local_results_path=$DATA_PATH
 is_cur_mu=True
 is_rank_cut_mu=True
 runner="parallel_x"
@@ -80,7 +85,3 @@ python -m pysc2.bin.play --norender --rgb_minimap_size 0 --replay NAME.SC2Replay
 ```
 
 **Note:** Replays cannot be watched using the Linux version of StarCraft II. Please use either the Mac or Windows version of the StarCraft II client.
-
-## Documentation/Support
-
-Documentation is a little sparse at the moment (but will improve!). Please raise an issue in this repo, or email [Tabish](mailto:tabish.rashid@cs.ox.ac.uk)
