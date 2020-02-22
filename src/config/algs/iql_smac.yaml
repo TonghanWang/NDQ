@@ -1,0 +1,30 @@
+# --- IQL specific parameters ---
+
+# use epsilon greedy action selector
+action_selector: "epsilon_greedy"
+epsilon_start: 1.0
+epsilon_finish: 0.05
+epsilon_anneal_time: 50000
+
+runner: "parallel"
+mac: "basic_mac" # Basic controller
+batch_size_run: 8
+
+buffer_size: 5000
+
+# update the target network every {} episodes
+target_update_interval: 200
+
+# use the Q_Learner to train
+agent: "rnn" # Default rnn agent
+agent_output_type: "q"
+learner: "q_learner"
+double_q: True
+mixer: # Mixer becomes None
+
+name: "iql_smac_parallel"
+
+# Comm
+comm: False
+comm_embed_dim: 10
+comm_method: information_bottleneck

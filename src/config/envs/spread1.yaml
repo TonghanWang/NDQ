@@ -1,0 +1,34 @@
+env: spread1
+
+env_args:
+  difficulty: "7"
+  obs_instead_of_state: False
+  obs_last_action: False
+  obs_pathing_grid: False
+  obs_terrain_height: False
+  reward_death_value: 10
+  reward_defeat: 0
+  reward_negative_scale: 0.5
+  reward_only_positive: True
+  reward_scale: True
+  reward_scale_rate: 20
+  reward_sparse: False
+  reward_win: 300
+  replay_dir: ""
+  replay_prefix: ""
+  state_last_action: True
+  debug: False
+  n_agents: 10
+  grid_size: 20
+  sight_range: 1
+  random_start: True
+  noise1: False
+  noise2: False
+
+learner_log_interval: 10000
+log_interval: 10000
+runner_log_interval: 10000
+t_max: 10050000
+test_interval: 10000
+test_nepisode: 300
+test_greedy: True
