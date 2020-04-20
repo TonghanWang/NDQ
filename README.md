@@ -57,9 +57,26 @@ They are all located in `src/config`.
 `--config` refers to the config files in `src/config/algs`
 `--env-config` refers to the config files in `src/config/envs`
 
-To run experiments using the Docker container:
+To train NDQ on SC2 tasks, run the following command:
 ```shell
-bash run.sh $GPU python3 src/main.py --config=qmix_smac --env-config=sc2 with env_args.map_name=2s3z
+--config=categorical_qmix
+--env-config=sc2
+with
+env_args.map_name=bZ_vs_hM
+env_args.sight_range=2
+env_args.shoot_range=2
+env_args.obs_all_health=False
+env_args.obs_enemy_health=False
+t_max=20050000
+test_interval=100000
+comm_embed_dim=3
+c_beta=0.1
+comm_beta=0.0001
+comm_entropy_beta=0.0
+batch_size_run=16
+save_model=True
+use_tensorboard=True
+runner="parallel_x"
 ```
 
 All results will be stored in the `Results` folder.
