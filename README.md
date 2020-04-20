@@ -62,7 +62,7 @@ To train NDQ on SC2 tasks, run the following command:
 --config=categorical_qmix
 --env-config=sc2
 with
-env_args.map_name=bZ_vs_hM
+env_args.map_name=bane_vs_hM
 env_args.sight_range=2
 env_args.shoot_range=2
 env_args.obs_all_health=False
@@ -78,6 +78,8 @@ save_model=True
 use_tensorboard=True
 runner="parallel_x"
 ```
+
+SMAC maps can be found in src/smac_plus/sc2_maps/.
 
 All results will be stored in the `Results` folder.
 
