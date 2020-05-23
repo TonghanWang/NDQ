@@ -67,15 +67,11 @@ env_args.sight_range=2
 env_args.shoot_range=2
 env_args.obs_all_health=False
 env_args.obs_enemy_health=False
-t_max=20050000
-test_interval=100000
 comm_embed_dim=3
 c_beta=0.1
 comm_beta=0.0001
 comm_entropy_beta=0.0
 batch_size_run=16
-save_model=True
-use_tensorboard=True
 runner="parallel_x"
 ```
 
