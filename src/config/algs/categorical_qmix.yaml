@@ -31,7 +31,7 @@ vmax: 10
 
 # Comm
 comm: True
-comm_embed_dim: 10
+comm_embed_dim: 3
 comm_method: "information_bottleneck_full"
 c_beta: 1.
 comm_beta: 0.001
