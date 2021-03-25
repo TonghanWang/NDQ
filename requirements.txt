@@ -30,7 +30,7 @@ pyparsing==2.2.2
 pysc2==2.0.2
 pytest==3.8.2
 python-dateutil==2.7.3
-PyYAML==3.13
+PyYAML==5.4
 requests==2.19.1
 s2clientprotocol==4.6.1.68195.0
 sacred==0.7.2
